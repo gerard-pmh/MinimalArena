@@ -1,0 +1,26 @@
+{
+  "name": "rabbitattack",
+  "version": "1.0.0",
+  "description": "Rabbit Battle Arena",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/Main.js -t babelify | uglifyjs -c > dist/rabbitattack.js",
+    "build-dev": "browserify src/Main.js -t babelify -o dist/rabbitattack.js",
+    "watch": "watchify src/Main.js -t babelify -o dist/rabbitattack.js"
+  },
+  "author": "pgrabbit",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "phaser": "^2.4.4",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.7.0"
+  }
+}

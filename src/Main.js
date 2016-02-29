@@ -1,8 +1,3 @@
-import RabbitAttack from './RabbitAttack';
+import Game from './Game';
 
-let game = new RabbitAttack();
-
-// window.addEventListener('resize', () => {
-//   game.scale.refresh();
-// });
-// game.scale.refresh();
+let game = new Game();

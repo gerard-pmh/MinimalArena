@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify src/Main.js -t babelify | uglifyjs -c > dist/rabbitattack.js",
-    "build-dev": "browserify src/Main.js -t babelify -o dist/rabbitattack.js",
-    "watch": "watchify src/Main.js -t babelify -o dist/rabbitattack.js"
+    "build": "browserify src/Main.js -t babelify | tee dist/game.js | uglifyjs -c > dist/game.min.js",
+    "watch": "watchify src/Main.js -t babelify | tee dist/game.js | uglifyjs -c > dist/game.min.js"
   },
   "author": "pgrabbit",
   "license": "GPL-3.0",
